@@ -204,9 +204,12 @@
     border: 1px solid #303030;
     border-radius: 10px;
     padding: 8px 16px 8px 14px;
-    position: relative;
-    opacity: 0.55;
-    cursor: default;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .gplay-badge:hover {
+    opacity: 0.85;
   }
 
   .gplay-badge svg.gplay-mark {
@@ -234,19 +237,6 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     letter-spacing: -0.01em;
     margin-top: 1px;
-  }
-
-  .soon-tag {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.03em;
-    color: var(--bg);
-    background: var(--snake);
-    padding: 3px 8px;
-    border-radius: 999px;
-    position: absolute;
-    top: -9px;
-    right: -8px;
   }
 
   .links a {
@@ -319,6 +309,12 @@
 <body>
 
   <header class="wrap">
+    <div class="brand">
+      <span class="brand-mark">
+        <img src="./snake-arrows-icon.png" alt="Snake Arrows">
+      </span>
+      Cem Şengezer
+    </div>
   </header>
 
   <main>
@@ -339,8 +335,7 @@
           </span>
         </a>
 
-        <span class="gplay-badge">
-          <span class="soon-tag">Yakında</span>
+        <a class="gplay-badge" href="https://play.google.com/store/apps/details?id=com.cemsengezer.snakearrows">
           <svg class="gplay-mark" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
             <path fill="#00D2FF" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1z"/>
             <path fill="#00D2FF" opacity="0.9" d="M52.7 0C39.4 4.6 31 16.7 31 32v448c0 15.3 8.4 27.4 21.7 32l253.2-256L52.7 0z"/>
@@ -348,10 +343,10 @@
             <path fill="#FFCF00" d="M416.4 232.4l60.5 34.8c17.5 10.1 17.5 34.9 0 45l-60.5 34.8-65.6-65.6z"/>
           </svg>
           <span class="badge-text">
-            <span class="small">Yakında</span>
+            <span class="small">GET IT ON</span>
             <span class="big">Google Play</span>
           </span>
-        </span>
+        </a>
       </div>
 
       <div class="links" style="margin-top: 18px;">
